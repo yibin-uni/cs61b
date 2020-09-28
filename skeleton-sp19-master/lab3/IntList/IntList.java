@@ -99,6 +99,32 @@ public class IntList {
         return new IntList(A.first, catenate(A.rest, B));
     }
 
+    /**
+     * Returns the reverse of the given IntList.
+     * This method is destructive. If given null
+     * as an input, return null.
+     */
+    public static IntList reverse(IntList A) {
+        if (A == null) {
+            return null;
+        }
+        else if (A.rest == null) {
+            return A;
+        }
+        else {
+            IntList pre = A, cur = A.rest, nex;
+            A.rest = null;
+            while (cur != null) {
+                nex = cur.rest;
+                cur.rest = A;
+                A = cur;
+                cur = nex;
+            }
+            return A;
+        }
+
+
+    }
 
 
 

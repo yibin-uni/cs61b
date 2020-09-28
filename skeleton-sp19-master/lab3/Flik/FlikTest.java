@@ -7,5 +7,5 @@ public class FlikTest {
     public void testFlik() {
         assertTrue(Flik.isSameNumber(500, 500));
     }
-
+    
 }
